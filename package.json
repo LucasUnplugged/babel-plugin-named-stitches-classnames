@@ -1,0 +1,49 @@
+{
+  "version": "0.1.0",
+  "description": "Babel plugin to generate named (human-legible prefixes) class names.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasUnplugged/babel-plugin-named-stitches-classnames.git"
+  },
+  "name": "babel-plugin-named-stitches-classnames",
+  "author": "Lucas Castro",
+  "main": "lib/index.js",
+  "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/register": "^7.10.4",
+    "mocha": "^8.1.3",
+    "mocha-clean": "^1.0.0"
+  },
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "babel src -d lib",
+    "test": "mocha -r mocha-clean -r @babel/register",
+    "test:watch": "npm run test -- --watch",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "babel-plugin",
+    "styled",
+    "stitches",
+    "react",
+    "css-in-js"
+  ],
+  "dependencies": {
+    "@babel/helper-plugin-utils": "^7.10.4"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0-0"
+  },
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/LucasUnplugged/babel-plugin-named-stitches-classnames/issues"
+  },
+  "homepage": "https://github.com/LucasUnplugged/babel-plugin-named-stitches-classnames#readme",
+  "directories": {
+    "example": "examples",
+    "lib": "lib",
+    "test": "test"
+  }
+}
